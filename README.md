@@ -39,6 +39,7 @@ Jenkins是当前最常用的CI服务器，Aliyun-OSS-Plugin for Jenkins的功能
 3. Object前缀: ${JOB_NAME}/${BUILD_ID}/${BUILD_NUMBER};folder/
 
 那么上传后的文件url为: 
+
 http://test.oss-cn-hangzhou.aliyuncs.com/test/2015-01-20_14-22-46/5/hello1.txt
 
 http://test.oss-cn-hangzhou.aliyuncs.com/folder/hello2.txt
