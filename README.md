@@ -35,12 +35,13 @@ Jenkins是当前最常用的CI服务器，Aliyun-OSS-Plugin for Jenkins的功能
 假设一个job的名称是test，用户的设置如下
 
 1. bucketName: test
-2. 要上传的artifacts: hello.txt;hello1.txt
+2. 要上传的artifacts: hello1.txt;hello2.txt
 3. Object前缀: ${JOB_NAME}/${BUILD_ID}/${BUILD_NUMBER};folder/
 
 那么上传后的文件url为: 
-http://test.oss-cn-hangzhou.aliyuncs.com/test/2015-01-20_14-22-46/5/hello.txt
-http://test.oss-cn-hangzhou.aliyuncs.com/folder/hello.txt
+http://test.oss-cn-hangzhou.aliyuncs.com/test/2015-01-20_14-22-46/5/hello1.txt
+
+http://test.oss-cn-hangzhou.aliyuncs.com/folder/hello2.txt
 
 明白了吗，要上传的artifacts和object的前缀是通过下标对应的，这样可以动态指定多个前缀key
 
