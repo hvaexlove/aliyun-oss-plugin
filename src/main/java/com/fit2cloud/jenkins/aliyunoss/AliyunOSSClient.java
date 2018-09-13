@@ -118,6 +118,7 @@ public class AliyunOSSClient {
 						try {
 							ObjectMetadata meta = new ObjectMetadata();
 							meta.setContentLength(src.length());
+							meta.setContentType(Mimetypes.getInstance().getMimetype(src.getName(), key));
 							client.putObject(bucketName, key, inputStream, meta);
 						} finally {
 							try {
