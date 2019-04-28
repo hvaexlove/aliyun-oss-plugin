@@ -11,7 +11,6 @@ Jenkins是当前最常用的CI服务器，Aliyun-OSS-Plugin for Jenkins的功能
 一、安装说明
 -------------------------
 
-插件下载地址：http://repository-proxy.com/content/repositories/releases/org/jenkins-ci/plugins/aliyun-oss/0.6/aliyun-oss-0.6.hpi
 在Jenkins中安装插件, 请到 Manage Jenkins | Advanced | Upload，上传插件(.hpi文件)
 安装完毕后请重新启动Jenkins
 
@@ -32,11 +31,11 @@ Jenkins是当前最常用的CI服务器，Aliyun-OSS-Plugin for Jenkins的功能
 2. 要上传的artifacts: 文件之间用;隔开。支持通配符描述，比如 text/*.zip
 3. Object前缀设置：可以设置object key的前缀，支持Jenkins环境变量比如: "${JOB_NAME}/${BUILD_ID}/${BUILD_NUMBER}/"
 
-假设一个job的名称是test，用户的设置如下
+假设一个job的名称是test，用;户的设置如下
 
 1. bucketName: test
 2. 要上传的artifacts: hello1.txt;hello2.txt
-3. Object前缀: ${JOB_NAME}/${BUILD_ID}/${BUILD_NUMBER};folder/
+3. Object前缀: ${JOB_NAME}/${BUILD_ID}/${BUILD_NUMBER};foUploaded object lder/
 
 那么上传后的文件url为: 
 
@@ -50,8 +49,7 @@ http://test.oss-cn-hangzhou.aliyuncs.com/folder/hello2.txt
 四、插件开发说明
 -------------------------
 
-1. git clone git@github.com:fit2cloud/aliyun-oss-plugin.git
-2. mvn -Declipse.workspace=aliyun-oss-plugin eclipse:eclipse eclipse:add-maven-repo
-3. import project to eclipse
-4. mvn jdi:run 进行本地调试
-5. mvn package 打包生成hpi文件
+1. mvn -Declipse.workspace=aliyun-oss-plugin eclipse:eclipse eclipse:add-maven-repo
+2. import project to eclipse
+3. mvn jdi:run 进行本地调试
+4. mvn package 打包生成hpi文件
